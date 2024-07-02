@@ -4,7 +4,7 @@ from io import BytesIO
 import base64
 
 def plot_view(request):
-    # Generate plot
+    # 產生 plot
     x = [10,20,30,40,50]
     y = [10,20,30,40,50]
     plt.plot(x, y)
@@ -12,7 +12,7 @@ def plot_view(request):
     plt.ylabel('Y')
     plt.title('WORK SECOND PART')
     
-    # Convert plot to base64 for embedding in HTML
+    # 轉 base64 到 HTML
     buffer = BytesIO()
     plt.savefig(buffer, format='png')
     buffer.seek(0)
